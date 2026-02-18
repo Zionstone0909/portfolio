@@ -7,7 +7,6 @@ import {
   DiNodejs,
   DiMongodb,
   DiPython,
-  DiGit,
   DiPhp,
   DiCss3,
   DiHtml5,

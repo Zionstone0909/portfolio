@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/home-main.svg";
-import Particle from "../Particle";
 
 import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
