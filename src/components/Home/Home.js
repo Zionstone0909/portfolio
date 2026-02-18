@@ -1,19 +1,29 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 
 function Home() {
+  const location = useLocation();
+
+  const buttons = [
+    { label: "View Resume", path: "/resume" },
+    { label: "Explore Projects", path: "/project" },
+    { label: "Contact", path: "/contact" }
+  ];
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <section>
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
           <Row style={{ minHeight: "50vh", alignItems: "center", justifyContent: "center" }}>
-            <Col md={10} style={{ textAlign: "center" }}>
+            <Col md={10} style={{ textAlign: "center", position: "relative", zIndex: 10 }}>
               <h1 style={{ paddingBottom: 8, fontSize: "3.2rem" }} className="heading">
                 Hi There! <span className="wave" role="img" aria-labelledby="wave">👋🏻</span>
               </h1>
@@ -30,10 +40,25 @@ function Home() {
                 <Type />
               </div>
 
-              <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-                <Button as={Link} to="/resume" variant="primary" style={{ minWidth: 140 }}>View Resume</Button>
-                <Button as={Link} to="/project" variant="outline-light" style={{ minWidth: 140 }}>Explore Projects</Button>
-                <Button as={Link} to="/contact" variant="outline-light" style={{ minWidth: 140 }}>Contact</Button>
+              <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", position: "relative", zIndex: 10 }}>
+                {buttons.map((btn) => (
+                  <Button
+                    key={btn.path}
+                    as={Link}
+                    to={btn.path}
+                    variant={isActive(btn.path) ? "primary" : "outline-light"}
+                    className={isActive(btn.path) ? "btn-active" : ""}
+                    style={{
+                      minWidth: 140,
+                      fontWeight: isActive(btn.path) ? "600" : "500",
+                      transition: "all 0.3s ease",
+                      pointerEvents: "auto",
+                      cursor: "pointer"
+                    }}
+                  >
+                    {btn.label}
+                  </Button>
+                ))}
               </div>
 
               <div style={{ marginTop: 18, display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
