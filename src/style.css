@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth !important;
   --section-background-color: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.582),
@@ -271,8 +272,6 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
-  position: relative !important;
-  z-index: 10 !important;
 }
 
 .heading {

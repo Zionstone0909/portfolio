@@ -36,7 +36,7 @@ function Contact() {
   }
 
   return (
-    <Container fluid className="resume-section">
+    <Container fluid className="resume-section" id="contact">
       <Row style={{ justifyContent: "center", padding: "40px 20px" }}>
         <Col md={8}>
           <h2 style={{ color: "#d1b3ff", marginBottom: 12, fontSize: "2.5rem" }}>Send us a message</h2>
