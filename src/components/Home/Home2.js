@@ -46,47 +46,7 @@ Outside of tech, I enjoy playing games, engaging in social services, and explori
             </Tilt>
           </Col>
         </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/Zionstone0909"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                  title="GitHub"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="mailto:hannahakanni7@gmail.com"
-                  className="icon-colour home-social-icons"
-                  title="Email"
-                >
-                  <AiOutlineMail />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://wa.me/23409030585841"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                  title="WhatsApp"
-                >
-                  <FaWhatsapp />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
+
       </Container>
     </Container>
   );

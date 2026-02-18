@@ -5,14 +5,51 @@ import Home2 from "./Home2";
 import Type from "./Type";
 
 function Home() {
-  const techStack = {
-    "Front-End": ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Next.js", "Redux", "Zustand", "Tailwind CSS", "Bootstrap", "Material UI", "React-Bootstrap", "Styled Components"],
-    "Back-End": ["Node.js", "Express.js", "Nest.js", "Django", "Flask", "Ruby on Rails"],
-    "Database": ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Redis"],
-    "DevOps & Deployment": ["Git", "GitHub", "GitLab", "Docker", "Docker Compose", "Netlify", "Vercel", "Heroku", "AWS"],
-    "Testing & Quality": ["Jest", "React Testing Library", "Cypress", "ESLint", "Prettier"],
-    "Tools & Utilities": ["Figma", "Photoshop", "Canva", "Postman", "VS Code", "npm"]
-  };
+  const allTechs = [
+    { name: "HTML5", col: 1 },
+    { name: "CSS3", col: 1 },
+    { name: "JavaScript (ES6+)", col: 2 },
+    { name: "React.js", col: 1 },
+    { name: "Next.js", col: 1 },
+    { name: "Redux", col: 1 },
+    { name: "Zustand", col: 1 },
+    { name: "Tailwind CSS", col: 1 },
+    { name: "Bootstrap", col: 1 },
+    { name: "Material UI", col: 1 },
+    { name: "React-Bootstrap", col: 2 },
+    { name: "Styled Components", col: 2 },
+    { name: "Node.js", col: 1 },
+    { name: "Express.js", col: 1 },
+    { name: "Nest.js", col: 1 },
+    { name: "Django", col: 1 },
+    { name: "Flask", col: 1 },
+    { name: "Ruby on Rails", col: 2 },
+    { name: "PostgreSQL", col: 1 },
+    { name: "MySQL", col: 1 },
+    { name: "MongoDB", col: 1 },
+    { name: "Firebase", col: 1 },
+    { name: "Redis", col: 1 },
+    { name: "Git", col: 1 },
+    { name: "GitHub", col: 1 },
+    { name: "GitLab", col: 1 },
+    { name: "Docker", col: 1 },
+    { name: "Docker Compose", col: 2 },
+    { name: "Netlify", col: 1 },
+    { name: "Vercel", col: 1 },
+    { name: "Heroku", col: 1 },
+    { name: "AWS", col: 1 },
+    { name: "Jest", col: 1 },
+    { name: "React Testing Library", col: 2 },
+    { name: "Cypress", col: 1 },
+    { name: "ESLint", col: 1 },
+    { name: "Prettier", col: 1 },
+    { name: "Figma", col: 1 },
+    { name: "Photoshop", col: 1 },
+    { name: "Canva", col: 1 },
+    { name: "Postman", col: 1 },
+    { name: "VS Code", col: 1 },
+    { name: "npm", col: 1 }
+  ];
 
   return (
     <section>
@@ -37,44 +74,48 @@ function Home() {
                 <Type />
               </div>
 
-              <div style={{ marginTop: 40, maxWidth: 1000, margin: "40px auto 0" }}>
-                <h2 style={{ fontSize: "2rem", color: "#d1b3ff", marginBottom: 30, fontWeight: 600 }}>
-                  Tech Stack
-                </h2>
-                <Row>
-                  {Object.entries(techStack).map(([category, techs]) => (
-                    <Col md={6} lg={4} key={category} style={{ marginBottom: 30 }}>
-                      <div style={{
-                        background: "rgba(199,112,240,0.08)",
-                        border: "1px solid rgba(199,112,240,0.3)",
-                        borderRadius: 12,
-                        padding: 20
-                      }}>
-                        <h5 style={{ color: "#c770f0", marginBottom: 15, fontWeight: 600, fontSize: "1.1rem" }}>
-                          {category}
-                        </h5>
-                        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                          {techs.map((tech) => (
-                            <span
-                              key={tech}
-                              style={{
-                                background: "rgba(199,112,240,0.15)",
-                                color: "#d1b3ff",
-                                padding: "6px 12px",
-                                borderRadius: 16,
-                                fontSize: "0.85rem",
-                                fontWeight: 500,
-                                border: "1px solid rgba(199,112,240,0.3)"
-                              }}
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </Col>
+              <div style={{ marginTop: 50, maxWidth: 1100, margin: "50px auto 0" }}>
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+                  gap: 12,
+                  width: "100%"
+                }}>
+                  {allTechs.map((tech) => (
+                    <div
+                      key={tech.name}
+                      style={{
+                        gridColumn: `span ${Math.min(tech.col, 2)}`,
+                        background: "linear-gradient(135deg, rgba(199,112,240,0.15) 0%, rgba(199,112,240,0.08) 100%)",
+                        border: "1.5px solid rgba(199,112,240,0.4)",
+                        borderRadius: 10,
+                        padding: tech.col === 2 ? "16px 12px" : "12px 10px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        textAlign: "center",
+                        color: "#d1b3ff",
+                        fontSize: tech.col === 2 ? "0.95rem" : "0.85rem",
+                        fontWeight: 500,
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                        boxShadow: "0 2px 8px rgba(199,112,240,0.1)"
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "linear-gradient(135deg, rgba(199,112,240,0.25) 0%, rgba(199,112,240,0.15) 100%)";
+                        e.currentTarget.style.transform = "translateY(-3px)";
+                        e.currentTarget.style.boxShadow = "0 5px 15px rgba(199,112,240,0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "linear-gradient(135deg, rgba(199,112,240,0.15) 0%, rgba(199,112,240,0.08) 100%)";
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow = "0 2px 8px rgba(199,112,240,0.1)";
+                      }}
+                    >
+                      {tech.name}
+                    </div>
                   ))}
-                </Row>
+                </div>
               </div>
             </Col>
           </Row>
