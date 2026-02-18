@@ -37,10 +37,10 @@ function Contact() {
 
   return (
     <Container fluid className="resume-section">
-      <Row style={{ justifyContent: "center", padding: "40px 0" }}>
+      <Row style={{ justifyContent: "center", padding: "40px 20px" }}>
         <Col md={8}>
-          <h2 style={{ color: "#d1b3ff", marginBottom: 12 }}>Send us a message</h2>
-          <p style={{ color: "#c9c3db", marginBottom: 20 }}>Please feel free to send us any questions, inquire about projects, feedback or suggestions you might have.</p>
+          <h2 style={{ color: "#d1b3ff", marginBottom: 12, fontSize: "2.5rem" }}>Send us a message</h2>
+          <p style={{ color: "#c9c3db", marginBottom: 30, fontSize: "1.1rem" }}>Please feel free to send us any questions, inquire about projects, feedback or suggestions you might have.</p>
 
           <Form onSubmit={handleSubmit}>
             <Row>

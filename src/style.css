@@ -1012,3 +1012,70 @@ position: relative;
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* --------- */
+/* Contact Form Styling */
+/* --------- */
+
+.resume-section {
+  position: relative;
+  padding: 50px 0 !important;
+  background-image: var(--image-gradient), url(./Assets/bh.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.resume-section .form-label {
+  color: #d1b3ff !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.resume-section .form-control {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+  color: white !important;
+  font-size: 0.95rem !important;
+  padding: 0.6rem 0.8rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.resume-section .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.resume-section .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: #c770f0 !important;
+  color: white !important;
+  box-shadow: 0 0 0 0.2rem rgba(199, 112, 240, 0.25) !important;
+  outline: none !important;
+}
+
+.resume-section textarea.form-control {
+  resize: vertical !important;
+  min-height: 120px !important;
+}
+
+.resume-section .btn-primary {
+  background-color: #c770f0 !important;
+  border-color: #c770f0 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.7rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.resume-section .btn-primary:hover {
+  background-color: #e89ffd !important;
+  border-color: #e89ffd !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(199, 112, 240, 0.4) !important;
+}
+
+.resume-section .btn-primary:focus {
+  background-color: #b559d8 !important;
+  border-color: #b559d8 !important;
+  box-shadow: 0 0 0 0.2rem rgba(199, 112, 240, 0.5) !important;
+}
