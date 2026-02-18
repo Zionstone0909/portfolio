@@ -33,7 +33,7 @@ function Home() {
               <div style={{ marginTop: 18, display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
                 <Button as={Link} to="/resume" variant="primary" style={{ minWidth: 140 }}>View Resume</Button>
                 <Button as={Link} to="/project" variant="outline-light" style={{ minWidth: 140 }}>Explore Projects</Button>
-                <Button href="mailto:hannahakanni7@gmail.com" variant="outline-light" style={{ minWidth: 140 }}>Contact</Button>
+                <Button as={Link} to="/contact" variant="outline-light" style={{ minWidth: 140 }}>Contact</Button>
               </div>
 
               <div style={{ marginTop: 18, display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>

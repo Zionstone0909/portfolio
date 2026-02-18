@@ -40,7 +40,7 @@ function Contact() {
       <Row style={{ justifyContent: "center", padding: "40px 0" }}>
         <Col md={8}>
           <h2 style={{ color: "#d1b3ff", marginBottom: 12 }}>Send us a message</h2>
-          <p style={{ color: "white", marginBottom: 20 }}>Please feel free to send us any questions, feedback or suggestions you might have.</p>
+          <p style={{ color: "#c9c3db", marginBottom: 20 }}>Please feel free to send us any questions, inquire about projects, feedback or suggestions you might have.</p>
 
           <Form onSubmit={handleSubmit}>
             <Row>
