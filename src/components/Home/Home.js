@@ -67,7 +67,7 @@ function Home() {
               </h1>
 
               <p style={{ maxWidth: 900, margin: "0.5rem auto 1rem", fontSize: "1.05rem", color: "#e9e6f7" }}>
-                Full-stack engineer building reliable, scalable applications — frontend, backend, and workflow automation (GoHighLevel). I deliver end-to-end solutions with clean code, pragmatic architecture, and measurable impact.
+                Full-stack engineer building reliable, scalable applications  frontend, backend, and workflow automation. I deliver end-to-end solutions with clean code, pragmatic architecture, and measurable impact.
               </p>
 
               <div style={{ padding: "0 1rem", textAlign: "center" }}>
