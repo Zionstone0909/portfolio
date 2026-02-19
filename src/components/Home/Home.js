@@ -56,26 +56,26 @@ function Home() {
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
-          <Row style={{ minHeight: "50vh", alignItems: "center", justifyContent: "center" }}>
-            <Col md={10} style={{ textAlign: "center", position: "relative", zIndex: 10 }}>
-              <h1 style={{ paddingBottom: 8, fontSize: "3.2rem" }} className="heading">
+          <Row className="home-hero" style={{ minHeight: "50vh", alignItems: "center", justifyContent: "center" }}>
+            <Col md={10} xs={12} className="home-hero-content" style={{ textAlign: "center", position: "relative", zIndex: 10, padding: "0 1rem" }}>
+              <h1 className="heading home-greeting" style={{ paddingBottom: 8 }}>
                 Hi There! <span className="wave" role="img" aria-labelledby="wave">👋🏻</span>
               </h1>
 
-              <h1 className="heading-name" style={{ marginBottom: 8, fontSize: "2.4rem" }}>
+              <h1 className="heading-name home-title" style={{ marginBottom: 8 }}>
                 I'm <strong className="main-name">Akanni Hannah Ibukun</strong>
               </h1>
 
-              <p style={{ maxWidth: 900, margin: "0.5rem auto 1rem", fontSize: "1.05rem", color: "#e9e6f7" }}>
+              <p className="home-description" style={{ maxWidth: 900, margin: "0.5rem auto 1rem", color: "#e9e6f7" }}>
                 Full-stack engineer building reliable, scalable applications  frontend, backend, and workflow automation. I deliver end-to-end solutions with clean code, pragmatic architecture, and measurable impact.
               </p>
 
-              <div style={{ padding: "0 1rem", textAlign: "center" }}>
+              <div className="typewriter-container" style={{ padding: "0 1rem", textAlign: "center", marginBottom: "2rem" }}>
                 <Type />
               </div>
 
-              <div style={{ marginTop: 50, maxWidth: 1100, margin: "50px auto 0" }}>
-                <div style={{
+              <div className="tech-stack-section" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 1rem" }}>
+                <div className="tech-grid" style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
                   gap: 12,

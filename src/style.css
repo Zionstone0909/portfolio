@@ -274,6 +274,26 @@ button:focus {
   text-align: left;
 }
 
+@media (max-width: 1024px) {
+  .home-content {
+    padding: 6rem 0 1.5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-content {
+    padding: 4rem 0 1rem !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content {
+    padding: 2.5rem 0 0.5rem !important;
+    text-align: center;
+  }
+}
+
 .heading {
   font-size: 4.4em !important;
   padding-left: 50px !important;
@@ -298,14 +318,160 @@ button:focus {
   color: #b562d6 !important;
 }
 
+/* Mobile & Tablet Responsive Home Section */
+.home-hero {
+  min-height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.home-hero-content {
+  padding: 0 1rem !important;
+}
+
+.home-greeting {
+  padding-bottom: 0.5rem !important;
+}
+
+.home-title {
+  margin-bottom: 1rem !important;
+}
+
+.home-description {
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  margin: 1rem auto 1.5rem !important;
+}
+
+.typewriter-container {
+  margin-bottom: 2rem !important;
+  min-height: 50px;
+}
+
+/* Tablet View (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .heading {
+    font-size: 3.5em !important;
+    padding-left: 2rem !important;
+  }
+
+  .heading-name {
+    font-size: 2.2em !important;
+    padding-left: 2rem !important;
+  }
+
+  .home-description {
+    font-size: 1rem !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .Typewriter__wrapper {
+    font-size: 1.8em !important;
+  }
+
+  .Typewriter__cursor {
+    font-size: 2em !important;
+  }
+
+  .tech-stack-section {
+    padding: 0 0.5rem !important;
+  }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+  .heading {
+    font-size: 2.5em !important;
+    padding-left: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .heading-name {
+    font-size: 1.8em !important;
+    padding-left: 0 !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .home-description {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    padding: 0 0.5rem !important;
+    margin: 0.8rem auto 1.2rem !important;
+  }
+
+  .Typewriter__wrapper {
+    font-size: 1.3em !important;
+    font-weight: 500 !important;
+    color: #be6adf !important;
+  }
+
+  .Typewriter__cursor {
+    font-size: 1.4em !important;
+    color: #b562d6 !important;
+  }
+
+  .typewriter-container {
+    margin-bottom: 1.5rem !important;
+    min-height: 40px;
+    padding: 0 0.5rem !important;
+  }
+
+  .tech-stack-section {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2em !important;
+    padding-left: 0 !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .heading-name {
+    font-size: 1.5em !important;
+    padding-left: 0 !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .home-description {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    padding: 0 !important;
+    margin: 0.6rem auto 1rem !important;
+  }
+
+  .Typewriter__wrapper {
+    font-size: 1.1em !important;
+    font-weight: 500 !important;
+  }
+
+  .Typewriter__cursor {
+    font-size: 1.2em !important;
+  }
+
+  .typewriter-container {
+    margin-bottom: 1.2rem !important;
+    padding: 0 !important;
+    min-height: 35px;
+  }
+
+  .tech-stack-section {
+    padding: 0 !important;
+  }
+}
+
 @media (max-width: 767px) {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
-    position: absolute !important;
+    position: relative !important;
   }
   .Typewriter__cursor {
-    display: none !important;
+    display: inline !important;
+    font-size: 1.4em !important;
   }
 }
 
@@ -330,14 +496,14 @@ button:focus {
   background-size: cover; /* makes it cover the whole container */
   
   position: relative;
-  padding-top: 70px !important;
+  padding-top: 30px !important;
   padding-bottom: 70px !important;
 }
 
 
 .home-about-description {
   color: white !important;
-  padding-top: 100px !important;
+  padding-top: 50px !important;
   padding-bottom: 20px !important;
   text-align: center;
 }
@@ -1033,6 +1199,8 @@ position: relative;
   color: #d1b3ff !important;
   font-weight: 500 !important;
   margin-bottom: 0.5rem !important;
+  text-align: left !important;
+  display: block !important;
 }
 
 .resume-section .form-control {
@@ -1087,4 +1255,101 @@ position: relative;
 .btn-active {
   box-shadow: 0 5px 15px rgba(199, 112, 240, 0.4) !important;
   transform: translateY(-2px) !important;
+}
+
+/* Tech Stack Section - Responsive Margin */
+.tech-stack-section {
+  margin-top: 50px !important;
+  width: 100%;
+}
+
+.tech-grid {
+  display: grid;
+  grid-auto-flow: row;
+  width: 100%;
+}
+
+/* Tech Card Base Styles */
+.tech-grid > div {
+  transition: all 0.3s ease !important;
+}
+
+.tech-grid > div:active {
+  transform: translateY(-2px) !important;
+  background: linear-gradient(135deg, rgba(199,112,240,0.25) 0%, rgba(199,112,240,0.15) 100%) !important;
+}
+
+/* Tablet View (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tech-stack-section {
+    margin-top: 60px !important;
+    padding: 0 1rem !important;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .tech-grid > div {
+    padding: 10px 8px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .typewriter-container {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+  .tech-stack-section {
+    margin-top: 70px !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  .tech-grid > div {
+    padding: 8px 6px !important;
+    font-size: 0.75rem !important;
+    border-radius: 6px !important;
+    min-height: auto !important;
+  }
+
+  .typewriter-container {
+    margin-bottom: 1.2rem !important;
+  }
+
+  .tech-stack-section {
+    max-width: 100% !important;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .tech-stack-section {
+    margin-top: 80px !important;
+    padding: 0 !important;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr)) !important;
+    gap: 6px !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .tech-grid > div {
+    padding: 6px 4px !important;
+    font-size: 0.65rem !important;
+    border-radius: 4px !important;
+    border-width: 1px !important;
+  }
+
+  .typewriter-container {
+    margin-bottom: 1rem !important;
+  }
 }
