@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/home-main.svg";
 
 import Tilt from "react-parallax-tilt";
-import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import { FaWhatsapp } from "react-icons/fa";
 
 function Home2() {
   return (
