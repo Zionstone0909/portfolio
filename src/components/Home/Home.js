@@ -21,6 +21,8 @@ function Home() {
     { name: "Node.js", col: 1 },
     { name: "Express.js", col: 1 },
     { name: "Nest.js", col: 1 },
+    { name: "PHP", col: 1 },
+    { name: "Laravel", col: 1 },
     { name: "Django", col: 1 },
     { name: "Flask", col: 1 },
     { name: "Ruby on Rails", col: 2 },
